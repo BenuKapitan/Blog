@@ -1,0 +1,38 @@
+{
+  "users": [
+    {
+      "id": 1737492122536,
+      "name": "Gipsz Jakab Kázmér",
+      "email": "gipsz@gov.hu",
+      "password": "$2a$08$mVNS8OFSQtHufsPJ.TNd/.E4ZjB3yUVufcy2Ar4qUj3tp2qOwT.yq"
+    },
+    {
+      "id": 1740000599935,
+      "name": "bela ",
+      "email": "asd@asd.asd",
+      "password": "$2a$08$JP..6C1pfeUEHIGkOLjTrO9ZVKqBe5ElKSPJFeTm1hIAQQkRyOMdq"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1740002161822,
+      "title": "Greedy Cat",
+      "subtitle": "consequences of greed",
+      "shortText": "His greed was his downfall",
+      "text": "His greed was his downfall, his desire for more ended him. He is nothing more than a husk, a pedestal for what was his end.",
+      "image": "https://cdn.discordapp.com/attachments/760462650365837332/1341886960633118760/image.png?ex=67b7a11e&is=67b64f9e&hm=ef5f127eaf66c679d6d6bbe8f4e2fe094c3d1d9c7762341a7e93df4959e31673&",
+      "category": "Cat",
+      "createdAt": "2025-02-19T21:56:01.822Z"
+    },
+    {
+      "id": 1740002771124,
+      "title": "Butter dog",
+      "subtitle": "Dog with the butter",
+      "shortText": "mindblowing",
+      "text": "The dog with the butter",
+      "image": "https://i1.sndcdn.com/artworks-YDgU6KNf10zHzK95-XXS6RQ-t1080x1080.jpg",
+      "category": "Dog",
+      "createdAt": "2025-02-19T22:06:11.124Z"
+    }
+  ]
+}

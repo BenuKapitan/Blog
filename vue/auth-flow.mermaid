@@ -1,0 +1,26 @@
+sequenceDiagram
+    participant F as Frontend (Vue)
+    participant B as Backend (JSON Server)
+    participant DB as Adatbázis (db.json)
+    
+    %% Regisztráció folyamata
+    Note over F,DB: Regisztrációs folyamat
+    F->>B: POST /register (email, jelszó)
+    B->>B: Jelszó titkosítása (bcrypt)
+    B->>DB: Felhasználó mentése
+    B->>B: JWT token generálása
+    B->>F: Token és felhasználói adatok
+    
+    %% Bejelentkezés folyamata
+    Note over F,DB: Bejelentkezési folyamat
+    F->>B: POST /login (email, jelszó)
+    B->>DB: Felhasználó keresése
+    B->>B: Jelszó ellenőrzése (bcrypt)
+    B->>B: JWT token generálása
+    B->>F: Token és felhasználói adatok
+    
+    %% Védett erőforrás elérése
+    Note over F,DB: Védett erőforrás elérése
+    F->>B: GET /protected (+ JWT token)
+    B->>B: Token ellenőrzése
+    B->>F: Védett adatok vagy Hiba (401)

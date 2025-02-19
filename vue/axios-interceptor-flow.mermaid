@@ -1,0 +1,16 @@
+sequenceDiagram
+    participant C as Komponens
+    participant I as Interceptor
+    participant S as Szerver
+    
+    C->>I: HTTP kérés
+    I->>S: Módosított kérés
+    S-->>I: HTTP válasz
+    
+    alt Sikeres válasz (2xx)
+        I->>I: response handler
+        I-->>C: Feldolgozott válasz
+    else Hiba válasz (4xx/5xx)
+        I->>I: error handler
+        I-->>C: Kezelt hiba
+    end
